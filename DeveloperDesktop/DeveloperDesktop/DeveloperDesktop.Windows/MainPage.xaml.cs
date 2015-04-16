@@ -34,11 +34,6 @@ namespace DeveloperDesktop
             mainPage = this;
             openWindows();
         }
-        private void OpenContextMenu(object sender, RightTappedRoutedEventArgs e)
-        {
-            //var message = new Windows.UI.Popups.MessageDialog("RIGHT CLICK BITCH!");
-            //message.ShowAsync();
-        }
 
         private void openWindows()
         {
