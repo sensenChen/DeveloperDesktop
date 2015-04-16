@@ -34,7 +34,7 @@ namespace DeveloperDesktop
             mainPage = this;
             openWindows();
         }
-
+        // Function that creates and renders a list of windows
         private void openWindows()
         {
             List<string> urls = new List<string>();
@@ -48,7 +48,7 @@ namespace DeveloperDesktop
                 RootGrid.Children.Add(windowsController.buttonList[window_index]);
             }
         }
-
+        // Function that is called on button click that generates a new web-view
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             string url = this.url_bar.Text;

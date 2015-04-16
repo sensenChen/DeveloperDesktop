@@ -11,10 +11,12 @@ namespace DeveloperDesktop.Controllers
 {
     public class WindowsController
     {
+        // Setting up important public configuration variables
         int height = 250, width = 500, count = 0;
         public List<WebView> windowList = new List<WebView>();
         public List<Button> buttonList = new List<Button>();
 
+        // Function that creates a web-view UI object, stores a reference and passes back an id
         public  int createWindow(string url)
         {
             WebView window = new WebView();
@@ -41,7 +43,7 @@ namespace DeveloperDesktop.Controllers
             count++;
             return count-1;
         }
-
+        // Funciton that removes an active web-view from the desktop and stops it from rendering
         public void closeWindow(object sender, TappedRoutedEventArgs e)
         {
             try
@@ -61,7 +63,7 @@ namespace DeveloperDesktop.Controllers
 
         public WindowsController()
         {
-            // TODO: Complete member initialization
+            // TODO: Complete member initialization when we have more complex data objects to store
 
         }
     }
