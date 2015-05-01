@@ -21,31 +21,32 @@ namespace DeveloperDesktop
 {
     
     /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
+    /// The main desktop view of our application.
     /// </summary>
     /// 
     public sealed partial class MainPage : Page
     {
-        WindowsController windowsController = new WindowsController();
+        // Instantiating classes for later use
         public MainPage mainPage;
+        private PreferencesModel preferences = new PreferencesModel();
+        
+        // On start, load user preferences and render the windows
         public MainPage()
         {
             this.InitializeComponent();
-            mainPage = this;
+            int num_windows = preferences.loadWindows();
             openWindows();
         }
         // Function that creates and renders a list of windows
         private void openWindows()
         {
             List<string> urls = new List<string>();
-            urls.Add("http://www.youtube.com");
-            urls.Add("http://www.twitter.com");
-            urls.Add("http://www.github.com");
-            for (int i = 0; i < urls.Count; i++)
+            for (int i = 0; i < preferences.windows.Count; i++)
             {
-                int window_index = windowsController.createWindow(urls[i]);
-                RootGrid.Children.Add(windowsController.windowList[window_index]);
-                RootGrid.Children.Add(windowsController.buttonList[window_index]);
+                PreferencesModel.window window = preferences.windows[i];
+                int window_index = WindowsController.createWindow(window.url, window.x, window.y, window.width, window.height);
+                RootGrid.Children.Add(WindowsController.windowList[window_index]);
+                RootGrid.Children.Add(WindowsController.buttonList[window_index]);
             }
         }
         // Function that is called on button click that generates a new web-view
@@ -55,9 +56,9 @@ namespace DeveloperDesktop
             try
             {
                 Uri uri = new Uri(url);
-                int window_index = windowsController.createWindow(url);
-                RootGrid.Children.Add(windowsController.windowList[window_index]);
-                RootGrid.Children.Add(windowsController.buttonList[window_index]);
+                int window_index = WindowsController.createWindow(url, 0, 0, 600, 400;
+                RootGrid.Children.Add(WindowsController.windowList[window_index]);
+                RootGrid.Children.Add(WindowsController.buttonList[window_index]);
                 this.url_bar.Text = "";
             }
             catch (Exception ex)
@@ -67,5 +68,13 @@ namespace DeveloperDesktop
             }
             
         }
+        // Removes references of UI elements and un-renders them from the screen
+        public void closeWindow(int window_index)
+        {
+            RootGrid.Children.Remove(WindowsController.windowList[window_index]);
+            RootGrid.Children.Remove(WindowsController.buttonList[window_index]);
+        }
+
+
     }
 }

@@ -9,22 +9,23 @@ using Windows.UI.Xaml.Input;
 
 namespace DeveloperDesktop.Controllers
 {
-    public class WindowsController
+    public partial class WindowsController
     {
         // Setting up important public configuration variables
-        int height = 250, width = 500, count = 0;
-        public List<WebView> windowList = new List<WebView>();
-        public List<Button> buttonList = new List<Button>();
+        static int height = 250, width = 500, count = 0;
+        public static List<WebView> windowList = new List<WebView>();
+        public static List<Button> buttonList = new List<Button>();
 
         // Function that creates a web-view UI object, stores a reference and passes back an id
-        public  int createWindow(string url)
+        public static int createWindow(string url, int x, int y, int width, int height)
         {
             WebView window = new WebView();
             window.Height = height;
             window.Width = width;
-            int row = (count%3);
-            int col = count / 3;
-            window.Margin = new Thickness(row*(width)+(row+1)*25, col*height+(col+1)*25, 0, 0);
+            //int row = (count%3);
+            //int col = count / 3;
+            //window.Margin = new Thickness(row*(width)+(row+1)*25, col*height+(col+1)*25, 0, 0);
+            window.Margin = new Thickness(x, y, 0, 0);
             window.HorizontalAlignment = Windows.UI.Xaml.HorizontalAlignment.Left;
             window.VerticalAlignment = Windows.UI.Xaml.VerticalAlignment.Top;
             window.Source = new Uri(url);
@@ -33,7 +34,8 @@ namespace DeveloperDesktop.Controllers
 
             Button closeButton = new Button();
             closeButton.Content = "X";
-            closeButton.Margin = new Thickness((row)*width + (row + 1) * 25, col * height + (col + 1) * 25, 0, 0);
+            closeButton.Margin = new Thickness(x, y, 0, 0);
+            //closeButton.Margin = new Thickness((row)*width + (row + 1) * 25, col * height + (col + 1) * 25, 0, 0);
             closeButton.HorizontalAlignment = Windows.UI.Xaml.HorizontalAlignment.Left;
             closeButton.VerticalAlignment = Windows.UI.Xaml.VerticalAlignment.Top;
             closeButton.DataContext = count;
@@ -43,15 +45,15 @@ namespace DeveloperDesktop.Controllers
             count++;
             return count-1;
         }
-        // Funciton that removes an active web-view from the desktop and stops it from rendering
-        public void closeWindow(object sender, TappedRoutedEventArgs e)
+        // Function that removes an active web-view from the desktop and stops it from rendering
+        public static void closeWindow(object sender, TappedRoutedEventArgs e)
         {
             try
             {
                 Button button = (Button)sender;
                 int index = (int)button.DataContext;
-                var warning = new Windows.UI.Popups.MessageDialog("DELETE: " + index);
-                warning.ShowAsync();
+                windowList.Remove(windowList[windowList.Count]);
+                buttonList.Remove(buttonList[buttonList.Count]);
             }
             catch (Exception ex)
             {

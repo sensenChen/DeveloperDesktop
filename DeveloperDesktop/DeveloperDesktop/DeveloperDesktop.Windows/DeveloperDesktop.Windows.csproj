@@ -106,6 +106,9 @@
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\PreferencesModel.cs" />
+    <Compile Include="Controllers\StartupController.cs" />
+    <Compile Include="Controllers\StorageController.cs" />
     <Compile Include="Controllers\WindowsController.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>

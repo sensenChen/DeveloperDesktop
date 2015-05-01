@@ -4,7 +4,9 @@ C:\Users\Devon\Documents\Projects\DeveloperDesktop\DeveloperDesktop\DeveloperDes
 C:\Users\Devon\Documents\Projects\DeveloperDesktop\DeveloperDesktop\DeveloperDesktop\DeveloperDesktop.Windows\obj\Debug\MainPage.g.cs
 C:\Users\Devon\Documents\Projects\DeveloperDesktop\DeveloperDesktop\DeveloperDesktop\DeveloperDesktop.Windows\obj\Debug\XamlTypeInfo.g.cs
 C:\Users\Devon\Documents\Projects\DeveloperDesktop\DeveloperDesktop\DeveloperDesktop\DeveloperDesktop.Windows\obj\Debug\App.xaml
+C:\Users\Devon\Documents\Projects\DeveloperDesktop\DeveloperDesktop\DeveloperDesktop\DeveloperDesktop.Windows\obj\Debug\MainPage.xaml
 C:\Users\Devon\Documents\Projects\DeveloperDesktop\DeveloperDesktop\DeveloperDesktop\DeveloperDesktop.Windows\obj\Debug\App.xbf
+C:\Users\Devon\Documents\Projects\DeveloperDesktop\DeveloperDesktop\DeveloperDesktop\DeveloperDesktop.Windows\obj\Debug\MainPage.xbf
 C:\Users\Devon\Documents\Projects\DeveloperDesktop\DeveloperDesktop\DeveloperDesktop\DeveloperDesktop.Windows\obj\Debug\XamlSaveStateFile.xml
 C:\Users\Devon\Documents\Projects\DeveloperDesktop\DeveloperDesktop\DeveloperDesktop\DeveloperDesktop.Windows\bin\Debug\App.xbf
 C:\Users\Devon\Documents\Projects\DeveloperDesktop\DeveloperDesktop\DeveloperDesktop\DeveloperDesktop.Windows\bin\Debug\MainPage.xbf
@@ -14,8 +16,6 @@ C:\Users\Devon\Documents\Projects\DeveloperDesktop\DeveloperDesktop\DeveloperDes
 C:\Users\Devon\Documents\Projects\DeveloperDesktop\DeveloperDesktop\DeveloperDesktop\DeveloperDesktop.Windows\bin\Debug\resources.pri
 C:\Users\Devon\Documents\Projects\DeveloperDesktop\DeveloperDesktop\DeveloperDesktop\DeveloperDesktop.Windows\bin\Debug\AppxManifest.xml
 C:\Users\Devon\Documents\Projects\DeveloperDesktop\DeveloperDesktop\DeveloperDesktop\DeveloperDesktop.Windows\bin\Debug\DeveloperDesktop.Windows.build.appxrecipe
-C:\Users\Devon\Documents\Projects\DeveloperDesktop\DeveloperDesktop\DeveloperDesktop\DeveloperDesktop.Windows\obj\Debug\MainPage.xaml
-C:\Users\Devon\Documents\Projects\DeveloperDesktop\DeveloperDesktop\DeveloperDesktop\DeveloperDesktop.Windows\obj\Debug\MainPage.xbf
 C:\Users\Devon\Documents\Projects\DeveloperDesktop\DeveloperDesktop\DeveloperDesktop\DeveloperDesktop.Windows\obj\Debug\DeveloperDesktop.Windows.exe
 C:\Users\Devon\Documents\Projects\DeveloperDesktop\DeveloperDesktop\DeveloperDesktop\DeveloperDesktop.Windows\obj\Debug\DeveloperDesktop.Windows.pdb
 C:\Users\Devon\Documents\Projects\DeveloperDesktop\DeveloperDesktop\DeveloperDesktop\DeveloperDesktop.Windows\obj\Debug\priconfig.xml
