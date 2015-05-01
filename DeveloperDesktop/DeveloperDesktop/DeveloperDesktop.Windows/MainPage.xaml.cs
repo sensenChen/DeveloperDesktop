@@ -56,7 +56,7 @@ namespace DeveloperDesktop
             try
             {
                 Uri uri = new Uri(url);
-                int window_index = WindowsController.createWindow(url, 0, 0, 600, 400;
+                int window_index = WindowsController.createWindow(url, 0, 0, 600, 400);
                 RootGrid.Children.Add(WindowsController.windowList[window_index]);
                 RootGrid.Children.Add(WindowsController.buttonList[window_index]);
                 this.url_bar.Text = "";
